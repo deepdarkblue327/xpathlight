@@ -22,7 +22,7 @@ xpl = XPathLight(browser)
 Now use xpl to find an element, click an element, get the text of an element, see if an element is clickable, get a list of all elements having an attribute, fill a text form or even get a list of all elements.
 
 ```
-xpl.find(tag="\*",attrs={},className="",idName="",name="",xpath="",wait=100)
+xpl.find(tag="\*",attrs={},className="",idName="",name="",containsText="",xpath="",wait=100)
 ```
 
 Use any one of the arguments above to find the element you need. If it doesnt find the element, it will return false with a time out error message.
