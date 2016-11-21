@@ -35,7 +35,7 @@ xpl.findAll(attrs={"value":"10"}) #returns list of elements
 xpl.text(idName="title") #returns text string or False bool
 xpl.texts(className="headers") #return list of text string
 xpl.click(containsText="Movies &") #returns True or False bool
-xpl.fill(name="q") #returns True or False bool
+xpl.fill(name="q",value="Batman") #returns True or False bool
 xpl.clickable(tag="button") #returns element or False bool
 ```
 
