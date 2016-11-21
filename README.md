@@ -6,13 +6,13 @@ Now scraping has become much easier with this flexible tool.
 To use:
 #Passed browser needs browser initialisation
 
-```
+```python
 from selenium import webdriver
 browser = webdriver.Chrome()
 ```
 #Pass the above browser to XPathLight
 
-```
+```python
 import XPathLight
 xpl = XPathLight(browser)
 ```
@@ -21,28 +21,28 @@ xpl = XPathLight(browser)
 
 Now use xpl to find an element, click an element, get the text of an element, see if an element is clickable, get a list of all elements having an attribute, fill a text form or even get a list of all elements.
 
-```
+```python
 xpl.find(tag="\*",attrs={},className="",idName="",name="",containsText="",xpath="",wait=100)
 ```
 
 Use any one of the arguments above to find the element you need. If it doesnt find the element, it will return false with a time out error message.
 
-With similar attributes you can do the following:
+With similar attributes you can do the following examples:
 
-```
-xpl.findAll(SAME_ATTRIBUTES)
-xpl.text(SAME_ATTRIBUTES)
-xpl.texts(SAME_ATTRIBUTES)
-xpl.click(SAME_ATTRIBUTES)
-xpl.fill(SAME_ATTRIBUTES)
-xpl.clickable(SAME_ATTRIBUTES)
+```python
+xpl.findAll(attrs={"value":"10"})
+xpl.text(idName="title")
+xpl.texts(className="headers")
+xpl.click(containsText="Movies &")
+xpl.fill(name="q")
+xpl.clickable(tag="button")
 ```
 
 #Other Examples
 
 You can also use tag along with attrs to get a specific tag you need:
 
-```
+```python
 xpl.find("div",{"class":"input"})
 ```
 
